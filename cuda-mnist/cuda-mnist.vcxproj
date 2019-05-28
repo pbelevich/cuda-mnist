@@ -81,6 +81,18 @@
   <ItemGroup>
     <CudaCompile Include="kernel.cu" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="layer.h" />
+    <ClInclude Include="mnist.h" />
+    <ClInclude Include="util.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CudaCompile Include="layer.cu">
+      <FileType>Document</FileType>
+    </CudaCompile>
+    <ClCompile Include="mnist.cpp" />
+    <ClCompile Include="util.cpp" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
     <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.1.targets" />
